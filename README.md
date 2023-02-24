@@ -15,3 +15,5 @@ Repositório criado na aula de PI.
 - maça
 - banana
 - coxinha
+- frango
+- carne suina

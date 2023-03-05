@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Quantos homens tem no elevador
+    <input id="ipt_homens_elevador" /><br>
+    Quantas mulheres tem no elevador?
+    <input id="ipt_mulheres_elevador"><br>
+    <button onclick='analise()'>
+        Analisar peso
+    </button>
+    <p id="p_msg">
+
+    </p>
+</body>
+
+</html>
+<script>
+    function analise() {
+        var homens_elevador = Number(ipt_homens_elevador.value)
+        var mulheres_elevador = Number(ipt_mulheres_elevador.value)
+        var pesoH = homens_elevador * 80
+        var pesoM = mulheres_elevador * 60
+        var pesoElevador = pesoH + pesoM
+
+        p_msg.innerHTML = `Este elevador suporta 800Kg, e o peso estiamdo desta lotação é:${pesoElevador}Kg</spam><br>`
+        if (pesoElevador > 1000) {
+            p_msg.innerHTML += `<spam style = 'color: red'>Será necessário descer alguém para que o elevador se movimente</spam>`
+
+        }
+        if (pesoElevador <= 1000) {
+            if (pesoElevador >= 800) {
+                p_msg.innerHTML += `<spam style = 'color: blue'>Será necessário descer alguém para que o elevador se movimente</spam>`
+            }
+        }
+    }
+
+</script>

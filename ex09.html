@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual a última série que você assisitu?
+    <input id="ipt_serie"><br>
+    Quantos episódios tem essa série?
+    <input id="ipt_qtd_episodios"><br>
+    <button onclick="verificar()">
+        Vereificar nível
+    </button>
+    <spam id="spm_msg">
+
+    </spam>
+</body>
+</html>
+<script>
+    function verificar(){
+        var episodios = Number(ipt_qtd_episodios.value)
+        var nome = ipt_serie.value
+        var qtd_horas = (episodios * 22)/60
+
+        spm_msg.innerHTML = `Vejo que você gosta da série ${nome}<br>`
+        if (qtd_horas >= 30){
+            spm_msg.innerHTML += `Uau, você realmente gosta dessa série!!!`
+        }
+
+
+
+    }
+</script>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual o valor da pizza?<br>
+    <input type="number" id="ipt_preco"><br>
+    Quantos amigos vão dividir?<br>
+    <input type="number" id="ipt_amigos"><br>
+    <button onclick="pizza()">
+        Rola pizza??
+    </button>
+    <div id="div_msg">  
+    
+    </div>
+</body> 
+</html>
+
+<script>
+    function pizza(){
+        var preco_pizza = Number(ipt_preco.value)
+        var amigos = Number(ipt_amigos.value)
+        var preco_amigo = Number(preco_pizza / amigos)
+        div_msg.innerHTML = `Cada amigo vai pagar R$${preco_amigo}<br>`
+        if(preco_amigo > 20){
+            div_msg.innerHTML += `<b style = "color: blue"><i>Deu ruim! Pizza muito cara!</b><i>`
+        }
+    }
+</script>

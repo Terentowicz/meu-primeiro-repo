@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual é o seu consumo mensal de kWh mensal?<br>
+    <input type="number" id="ipt_consumo"><br>
+    <button onclick="calcular()">
+        Calcular conta de luz
+    </button>
+    
+</body>
+</html>
+<script>
+
+    function calcular() {
+        var consumo = Number(ipt_consumo.value)
+        var conta = (consumo * 0.85)
+        if (consumo >100){
+            alert(`Sua conta ficou no valor de:R$${conta}`)
+        }
+        if (consumo <100){
+            var desconto = ((conta * 100)/10)
+            alert(`Sua conta com desconto de 10% ficou em:R$${desconto}`)
+
+        }
+        
+    }
+
+</script>
